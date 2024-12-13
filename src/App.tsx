@@ -1,12 +1,12 @@
-import './App.css'
+import { Outlet, Router } from "@tanstack/react-location";
+import { location, routes } from "./routes";
 
 function App() {
-
   return (
-    <div>
-      Edit app.tsx
-    </div>
-  )
+    <Router location={location} routes={routes}>
+      <Outlet />
+    </Router>
+  );
 }
 
-export default App
+export default App;
