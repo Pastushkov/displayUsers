@@ -16,15 +16,6 @@ export const Card = ({ user }: Props) => {
     });
   };
 
-  // <div className={styles.container}
-  //   <img src={userIcon} alt="user" className={styles.userIcon} />
-  //   <div>
-  //     <div className={styles.name}>{user.name}</div>
-  //     <div className={styles.row}>{user.company.name}</div>
-  //     <div className={styles.phone}>{user.phone}</div>
-  //   </div>
-  // </div>
-
   return (
     <div className={styles.card}>
       <img
