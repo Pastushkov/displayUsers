@@ -6,6 +6,7 @@ import {
 } from "@tanstack/react-location";
 import { UsersPage } from "./pages/UsersPage/UsersPage";
 import { UserInfoPage } from "./pages/UserInfoPage/UserInfoPage";
+import { RootProvider } from "./state/RootContext";
 
 export type LocationGenerics = MakeGenerics<{
   Params: {
@@ -23,10 +24,18 @@ export const routes: Route<LocationGenerics>[] = [
   },
   {
     path: "/users",
-    element: <UsersPage />,
+    element: (
+      <RootProvider>
+        <UsersPage />
+      </RootProvider>
+    ),
   },
   {
-    path: '/user/:userId',
-    element: <UserInfoPage/>
-  }
+    path: "/user/:userId",
+    element: (
+      <RootProvider>
+        <UserInfoPage />
+      </RootProvider>
+    ),
+  },
 ];

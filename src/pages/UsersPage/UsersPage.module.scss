@@ -1,5 +1,7 @@
-@import '/src/styles/variables.scss';
+@use "/src/styles/variables.scss" as variables;
 
 .container {
-  background-color: $primary-color;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
