@@ -12,17 +12,40 @@ export const Card = ({ user }: Props) => {
 
   const openUserInfo = () => {
     navigate({
-      to: `/user/${user.id}`,
+      to: `/user/info/${user.id}`,
     });
   };
 
+  // <div className={styles.container}
+  //   <img src={userIcon} alt="user" className={styles.userIcon} />
+  //   <div>
+  //     <div className={styles.name}>{user.name}</div>
+  //     <div className={styles.row}>{user.company.name}</div>
+  //     <div className={styles.phone}>{user.phone}</div>
+  //   </div>
+  // </div>
+
   return (
-    <div className={styles.container} onClick={openUserInfo}>
-      <img src={userIcon} alt="user" className={styles.userIcon} />
-      <div>
-        <div className={styles.name}>{user.name}</div>
-        <div className={styles.row}>{user.company.name}</div>
-        <div className={styles.phone}>{user.phone}</div>
+    <div className={styles.card}>
+      <img
+        src="https://www.bootdey.com/image/340x120/20B2AA/000000"
+        alt="Cover"
+        className={styles.card__topImage}
+      />
+      <div className={styles.card__body}>
+        <img src={userIcon} alt="User" className={styles.card__userIcon} />
+        <h5 className={styles.card__title}>{user.name}</h5>
+        <p className={styles.card__company}>{user.company.name}</p>
+        <p className={styles.card__email}>{user.email}</p>
+      </div>
+      <div className={styles.card__footer}>
+        <button
+          className={styles.card__detailsButton}
+          type="button"
+          onClick={openUserInfo}
+        >
+          Details
+        </button>
       </div>
     </div>
   );

@@ -6,4 +6,8 @@ export const UsersService = {
     const { data } = await api.get("/users");
     return data;
   },
+  fetchUserInfo: async (id: string): Promise<User> => {
+    const { data } = await api.get(`/users/${id}`);
+    return data;
+  },
 };
