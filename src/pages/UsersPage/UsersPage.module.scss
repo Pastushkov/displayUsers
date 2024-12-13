@@ -1,7 +1,10 @@
 @use "/src/styles/variables.scss" as variables;
 
 .container {
+  padding: 20px;
+  padding-bottom: 10px;
   display: flex;
-  gap: 10px;
+  gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
 }

@@ -10,8 +10,8 @@ interface Props {
 
 export const ErrorBoundary = ({ close, message }: Props) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.inner}>
+    <div className={styles.boundary}>
+      <div className={styles.boundary__inner}>
         <img src={errorIcon} alt="error" />
         <div>
           {message ||
@@ -19,7 +19,7 @@ export const ErrorBoundary = ({ close, message }: Props) => {
         </div>
         <img
           src={crossIcon}
-          className={styles.crossIcon}
+          className={styles.boundary__crossIcon}
           alt="cross"
           onClick={close}
         />

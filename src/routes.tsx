@@ -31,7 +31,7 @@ export const routes: Route<LocationGenerics>[] = [
     ),
   },
   {
-    path: "/user/:userId",
+    path: "/user/info/:userId",
     element: (
       <RootProvider>
         <UserInfoPage />

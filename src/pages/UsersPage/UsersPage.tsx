@@ -5,6 +5,7 @@ import { UsersService } from "../../services/UserService";
 import { Loader } from "../../components/Loader/Loader";
 import { Card } from "../../components/Card/Card";
 import { useRootContext } from "../../hooks/useRootContext";
+import { Header } from "../../components/Header/Header";
 
 export const UsersPage = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -35,10 +36,13 @@ export const UsersPage = () => {
   }
 
   return (
-    <div className={styles.container}>
-      {users.map((user) => {
-        return <Card user={user} key={user.id} />;
-      })}
-    </div>
+    <>
+      <Header title="Users List" />
+      <div className={styles.container}>
+        {users.map((user) => {
+          return <Card user={user} key={user.id} />;
+        })}
+      </div>
+    </>
   );
 };
