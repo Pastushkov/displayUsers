@@ -1,0 +1,64 @@
+@use "/src/styles/variables.scss" as variables;
+@use "/src/styles/colors.scss" as colors;
+
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userIcon {
+  width: 100px;
+  height: 100px;
+}
+
+.card {
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow:
+    0 1px 3px 0 colors.$black,
+    0 1px 2px 0 colors.$black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: colors.$darkblue-10;
+  max-width: 600px;
+  padding: 16px;
+  &__header {
+    text-align: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: colors.$darkblue-100;
+    color: colors.$white;
+    font-weight: 500;
+    * {
+      font-size: variables.$font-xl;
+    }
+  }
+  &__list {
+    margin-top: 16px;
+    list-style-type: none;
+    span {
+      font-size: variables.$font-xl;
+    }
+    a {
+      text-decoration: underline;
+      color: colors.$black;
+      font-size: variables.$font-base;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  &__company {
+    width: 100%;
+    background-color: colors.$darkblue-100;
+    padding: 10px 20px;
+    color: colors.$white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

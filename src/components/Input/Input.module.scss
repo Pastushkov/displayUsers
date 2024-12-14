@@ -1,0 +1,15 @@
+@use "/src/styles/colors.scss" as colors;
+
+.container {
+  position: relative;
+  .placeholder {
+    padding-left: 28px;
+  }
+}
+
+.input {
+  max-width: 250px;
+  padding: 6px 14px 6px 14px;
+  border-color: 1px solid colors.$neutral-25;
+  border-radius: 8px;
+}
