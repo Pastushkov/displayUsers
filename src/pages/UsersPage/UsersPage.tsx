@@ -46,8 +46,8 @@ export const UsersPage = () => {
     if (value) {
       setFilteredUsers((users) =>
         users.filter(({ name }) =>
-          name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
-        )
+          name.toLocaleLowerCase().includes(value.toLocaleLowerCase()),
+        ),
       );
     } else {
       setFilteredUsers(users);
