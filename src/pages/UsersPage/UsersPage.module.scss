@@ -1,10 +1,28 @@
 @use "/src/styles/variables.scss" as variables;
 
 .container {
-  padding: 20px;
-  padding-bottom: 10px;
-  display: flex;
+  padding: 10px;
+  text-align: center;
+}
+
+.list {
+  padding: 10px;
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
+  display: flex;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  span {
+    cursor: pointer;
+  }
+}
+
+.invisible {
+  visibility: hidden !important;
 }
